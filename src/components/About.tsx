@@ -64,7 +64,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-6 rounded-2xl bg-zinc-800/50 md:p-8">
+        <div className="mt-6 rounded-2xl bg-zinc-800/50 p-8">
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">Random Quote</h4>
           <blockquote className="mt-6 border-l-2 pl-6 text-zinc-400 italic md:text-xl">
             "Coding is not just code, that is a live thing to serve humans!"

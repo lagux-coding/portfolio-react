@@ -24,7 +24,7 @@ const Header = () => {
           <Navbar navOpen={navOpen} />
         </div>
 
-        <a href="#contact" className="btn btn-secondary">
+        <a href="#contact" className="btn btn-secondary !hidden md:!flex">
           Contact Me
         </a>
       </div>

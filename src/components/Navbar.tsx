@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import { NavbarProps } from "@/types/types";
 

@@ -127,7 +127,6 @@ const skillItem = [
 ];
 
 const Skill = () => {
-  const ref = useRef(null);
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredSkills =

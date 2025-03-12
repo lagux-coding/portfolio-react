@@ -1,16 +1,16 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const aboutItems = [
-  {
-    label: "Project done",
-    number: 45,
-  },
-  {
-    label: "Years of experience",
-    number: 10,
-  },
-];
+// const aboutItems = [
+//   {
+//     label: "Project done",
+//     number: 45,
+//   },
+//   {
+//     label: "Years of experience",
+//     number: 10,
+//   },
+// ];
 
 const About = () => {
   const ref = useRef(null);

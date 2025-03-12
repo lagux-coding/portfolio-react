@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import { ButtonProps } from "@/types/types";
 
-const ButtonPrimary = ({ href, target, label, icon, classes }) => {
+const ButtonPrimary = ({ href, target, label, icon, classes }: ButtonProps) => {
   return href ? (
     <a href={href} target={target} className={`btn btn-primary ${classes}`}>
       {label}
@@ -14,15 +14,7 @@ const ButtonPrimary = ({ href, target, label, icon, classes }) => {
   );
 };
 
-ButtonPrimary.propTypes = {
-  label: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  target: PropTypes.string,
-  icon: PropTypes.string,
-  classes: PropTypes.string,
-};
-
-const ButtonOutline = ({ href, target, label, icon, classes }) => {
+const ButtonOutline = ({ href, target, label, icon, classes }: ButtonProps) => {
   return href ? (
     <a href={href} target={target} className={`btn btn-outline ${classes}`}>
       {label}
@@ -34,14 +26,6 @@ const ButtonOutline = ({ href, target, label, icon, classes }) => {
       {icon && <span className="icon">{icon}</span>}
     </button>
   );
-};
-
-ButtonOutline.propTypes = {
-  label: PropTypes.string.isRequired,
-  href: PropTypes.string,
-  target: PropTypes.string,
-  icon: PropTypes.string,
-  classes: PropTypes.string,
 };
 
 export { ButtonPrimary, ButtonOutline };

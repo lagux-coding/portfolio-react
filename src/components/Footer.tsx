@@ -56,6 +56,7 @@ const Footer = () => {
 
             <ButtonPrimary
               href="mailto:namnguyen8644@gmail.com"
+              target="_blank"
               label="Let's Connect"
               icon={<FaChevronRight />}
               classes={`max-w-max`}

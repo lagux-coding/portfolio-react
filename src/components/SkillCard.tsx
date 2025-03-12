@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
+import { SkillCardProps } from "@/types/types";
 
-const SkillCard = ({ imgSrc, label, desc, classes }) => {
+const SkillCard = ({ imgSrc, label, desc, classes }: SkillCardProps) => {
   return (
     <div
       className={`group flex items-center gap-3 rounded-2xl p-3 ring-2 ring-zinc-50/10 transition-colors ring-inset hover:bg-zinc-800 ${classes}`}
@@ -15,13 +15,6 @@ const SkillCard = ({ imgSrc, label, desc, classes }) => {
       </div>
     </div>
   );
-};
-
-SkillCard.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
-  classes: PropTypes.string,
 };
 
 export default SkillCard;

@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
 import { MdArrowOutward } from "react-icons/md";
+import { ProjectCardProps } from "@/types/types";
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }: ProjectCardProps) => {
   return (
     <div
       className={`relative rounded-2xl bg-zinc-800 p-4 ring-1 ring-zinc-50/5 transition-colors ring-inset hover:bg-zinc-700/50 active:bg-zinc-700/60 ${classes}`}
@@ -37,14 +37,6 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
       </div>
     </div>
   );
-};
-
-ProjectCard.propTypes = {
-  imgSrc: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
-  projectLink: PropTypes.string,
-  classes: PropTypes.string,
 };
 
 export default ProjectCard;

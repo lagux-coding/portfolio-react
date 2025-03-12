@@ -1,8 +1,9 @@
+import { FilterButtonProps } from "@/types/types";
 import { Button } from "./ui/button";
 
 const categories = ["All", "Languages", "Frontend", "Backend", "Databases", "Others"];
 
-const FilterButton = ({ activeCategory, setActiveCategory }) => {
+const FilterButton = ({ activeCategory, setActiveCategory }: FilterButtonProps) => {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {categories.map((category, index) => (

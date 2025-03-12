@@ -1,9 +1,10 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
+import { NavbarProps } from "@/types/types";
 
-const Navbar = ({ navOpen }) => {
-  const navLinksRef = useRef([]); // Lưu ref cho từng link
-  const activeBox = useRef(null);
+const Navbar = ({ navOpen }: NavbarProps) => {
+  const navLinksRef = useRef<(HTMLAnchorElement | null)[]>([]);
+  const activeBox = useRef<HTMLDivElement | null>(null);
   const navItems = [
     { label: "Home", link: "#home" },
     { label: "About", link: "#about" },
@@ -12,7 +13,6 @@ const Navbar = ({ navOpen }) => {
     { label: "Contact", link: "#contact" },
   ];
 
-  // Lấy index từ localStorage hoặc từ URL hash
   const getInitialIndex = () => {
     const savedIndex = localStorage.getItem("activeIndex");
     const currentHash = window.location.hash;
@@ -23,7 +23,7 @@ const Navbar = ({ navOpen }) => {
 
   const [activeIndex, setActiveIndex] = useState(getInitialIndex);
 
-  const updateActiveBox = (index) => {
+  const updateActiveBox = (index: number) => {
     const link = navLinksRef.current[index];
     if (!link || !activeBox.current) return;
 
@@ -37,19 +37,21 @@ const Navbar = ({ navOpen }) => {
     updateActiveBox(activeIndex);
   }, [activeIndex]);
 
-  const handleLinkClick = (index) => {
+  const handleLinkClick = (index: number) => {
     setActiveIndex(index);
-    localStorage.setItem("activeIndex", index);
+    localStorage.setItem("activeIndex", String(index));
   };
 
   return (
     <nav className={`navbar ${navOpen ? "active" : ""}`}>
-      {navItems.map(({ label, link }, index) => (
+      {navItems.map(({ label, link }, index: number) => (
         <a
           href={link}
           className={`nav-link ${index === activeIndex ? "active" : ""}`}
           key={index}
-          ref={(el) => (navLinksRef.current[index] = el)}
+          ref={(el) => {
+            navLinksRef.current[index] = el;
+          }}
           onClick={() => handleLinkClick(index)}
         >
           {label}

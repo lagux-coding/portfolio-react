@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Button } from "./ui/button";
 
 const socialLinks = [
   {

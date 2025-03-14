@@ -1,4 +1,4 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { ReactLenis } from "lenis/react";
 import About from "@/components/About";
 import Contact from "@/components/Contact";

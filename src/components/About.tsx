@@ -4,11 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // const aboutItems = [
 //   {
 //     label: "Project done",
-//     number: 45,
+//     number: 0,
 //   },
 //   {
 //     label: "Years of experience",
-//     number: 10,
+//     number: 0,
 //   },
 // ];
 

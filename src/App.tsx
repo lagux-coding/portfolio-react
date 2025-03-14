@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ReactLenis } from "lenis/react";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -10,6 +11,7 @@ import Work from "@/components/Work";
 const App = () => {
   return (
     <ReactLenis root>
+      <SpeedInsights />
       <Header />
       <main>
         <Hero />

@@ -4,6 +4,8 @@
 
 # 🚀 My Portfolio
 
+### 🌍 See It Live 🔗 **[Visit My Portfolio](https://your-deployed-url.com)**
+
 ![Portfolio Preview](/public/images/work/portfolio-react.png)
 
 A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**,  

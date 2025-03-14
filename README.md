@@ -4,7 +4,7 @@
 
 # 🚀 My Portfolio
 
-### 🌍 See It Live 🔗 **[Visit My Portfolio](https://your-deployed-url.com)**
+### 🌍 See It Live 🔗 **[Visit My Portfolio](https://namht.is-a.dev)**
 
 ![Portfolio Preview](/public/images/work/portfolio-react.png)
 

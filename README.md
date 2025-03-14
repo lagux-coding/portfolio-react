@@ -6,8 +6,8 @@
 
 ![Portfolio Preview](/public/images/work/portfolio-react.png)
 
-> A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**,  
-> featuring **Lenis smooth scrolling**, **Framer Motion animations**, and **fully responsive design**.
+A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**,  
+featuring **Lenis smooth scrolling**, **Framer Motion animations**, and **fully responsive design**.
 
 ## 📦 Tech Stack
 
@@ -46,7 +46,7 @@ npm run dev
 
 ## 📜 License
 
-This project is licensed under the [**Apache-2.0 license**](LICENSE).
+![GitHub License](https://img.shields.io/github/license/lagux-coding/portfolio-react)
 
 ---
 

@@ -6,7 +6,7 @@ const works = [
   {
     imgSrc: "/images/work/prestige-koi-auction.webp",
     title: "Prestige Koi Auction",
-    tags: ["API", "Backend", "JWT", "Development"],
+    tags: ["API", "Frontend", "Backend", "JWT", "Development"],
     projectLink: "https://github.com/lagux-coding/prestige-koi-auction/",
   },
 ];

@@ -55,7 +55,7 @@ const Footer = () => {
             </h2>
 
             <ButtonPrimary
-              href="mailto:namnguyen8644@gmail.com"
+              href="mailto:nguyenhientrungnam@gmail.com"
               target="_blank"
               label="Let's Connect"
               icon={<FaChevronRight />}

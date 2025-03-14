@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# 🚀 My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**, featuring styling powered by **Lenis**, **Framer Motion**,...
 
-Currently, two official plugins are available:
+## 📦 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React, TypeScript, TailwindCSS
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1️⃣ Clone the Repository
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+git clone https://github.com/lagux-coding/portfolio-react.git
+cd portfolio-react
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install Dependencies
 
-```js
-// eslint.config.js
-import reactDom from "eslint-plugin-react-dom";
-import reactX from "eslint-plugin-react-x";
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-});
+```bash
+npm install
 ```
+
+### 3️⃣ Run Locally
+
+```bash
+npm run dev
+```
+
+## 📷 Screenshots
+
+### 🏠 Home Section
+
+![Home](screenshots/home.png)
+
+### 👀 About Section
+
+![About](screenshots/about.png)
+
+### 💡 Skill Page
+
+![Skill](screenshots/skill.png)
+
+### 💼 Work Page
+
+![Work](screenshots/work.png)
+
+### 📞 Contact Page
+
+![Contact](screenshots/contact.png)
+
+### 🏁 Footer Page
+
+![Footer](screenshots/footer.png)
+
+## 📜 License
+
+This project is licensed under the [**Apache-2.0 license**](https://github.com/lagux-coding/portfolio-react?tab=Apache-2.0-1-ov-file#readme).
+
+---
+
+Made with ❤️ by **Me**

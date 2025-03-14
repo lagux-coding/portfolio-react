@@ -9,6 +9,12 @@ const works = [
     tags: ["API", "Frontend", "Backend", "JWT", "Development"],
     projectLink: "https://github.com/lagux-coding/prestige-koi-auction/",
   },
+  {
+    imgSrc: "/images/work/portfolio-react.png",
+    title: "Portfolio",
+    tags: ["Frontend", "Design", "Development"],
+    projectLink: "https://github.com/lagux-coding/portfolio-react.git",
+  },
 ];
 
 const Work = () => {

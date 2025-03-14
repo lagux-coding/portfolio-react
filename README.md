@@ -37,19 +37,19 @@ npm run dev
 
 ![About](screenshots/about.png)
 
-### 💡 Skill Page
+### 💡 Skill Section
 
 ![Skill](screenshots/skill.png)
 
-### 💼 Work Page
+### 💼 Work Section
 
 ![Work](screenshots/work.png)
 
-### 📞 Contact Page
+### 📞 Contact Section
 
 ![Contact](screenshots/contact.png)
 
-### 🏁 Footer Page
+### 🏁 Footer Section
 
 ![Footer](screenshots/footer.png)
 

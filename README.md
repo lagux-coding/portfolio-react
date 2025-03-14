@@ -1,10 +1,17 @@
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&link=https%3A%2F%2Freact.dev%2Fblog%2F2024%2F12%2F05%2Freact-19)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-3178C6?style=flat&logo=typescript&link=https%3A%2F%2Fwww.typescriptlang.org%2F)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat&logo=tailwind&link=https%3A%2F%2Ftailwindcss.com%2F)
+
 # 🚀 My Portfolio
 
-A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**, featuring styling powered by **Lenis**, **Framer Motion**,...
+![Portfolio Preview](/public/images/work/portfolio-react.png)
+
+> A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**,  
+> featuring **Lenis smooth scrolling**, **Framer Motion animations**, and **fully responsive design**.
 
 ## 📦 Tech Stack
 
-- **Frontend:** React, TypeScript, TailwindCSS
+- **Frontend:** React, TypeScript, TailwindCSS, Shadcn-ui, Framer Motion, Lenis
 
 ## 🚀 Getting Started
 
@@ -29,33 +36,17 @@ npm run dev
 
 ## 📷 Screenshots
 
-### 🏠 Home Section
+| Home                          | About                           | Skills                          |
+| ----------------------------- | ------------------------------- | ------------------------------- |
+| ![Home](screenshots/home.png) | ![About](screenshots/about.png) | ![Skill](screenshots/skill.png) |
 
-![Home](screenshots/home.png)
-
-### 👀 About Section
-
-![About](screenshots/about.png)
-
-### 💡 Skill Section
-
-![Skill](screenshots/skill.png)
-
-### 💼 Work Section
-
-![Work](screenshots/work.png)
-
-### 📞 Contact Section
-
-![Contact](screenshots/contact.png)
-
-### 🏁 Footer Section
-
-![Footer](screenshots/footer.png)
+| Work                          | Contact                             | Footer                            |
+| ----------------------------- | ----------------------------------- | --------------------------------- |
+| ![Work](screenshots/work.png) | ![Contact](screenshots/contact.png) | ![Footer](screenshots/footer.png) |
 
 ## 📜 License
 
-This project is licensed under the [**Apache-2.0 license**](https://github.com/lagux-coding/portfolio-react?tab=Apache-2.0-1-ov-file#readme).
+This project is licensed under the [**Apache-2.0 license**](LICENSE).
 
 ---
 

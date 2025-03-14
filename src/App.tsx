@@ -10,18 +10,20 @@ import Work from "@/components/Work";
 
 const App = () => {
   return (
-    <ReactLenis root>
+    <>
       <SpeedInsights />
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skill />
-        <Work />
-        <Contact />
-      </main>
-      <Footer />
-    </ReactLenis>
+      <ReactLenis root>
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Skill />
+          <Work />
+          <Contact />
+        </main>
+        <Footer />
+      </ReactLenis>
+    </>
   );
 };
 

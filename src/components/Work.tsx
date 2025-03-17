@@ -10,7 +10,7 @@ const works = [
     projectLink: "https://github.com/lagux-coding/prestige-koi-auction/",
   },
   {
-    imgSrc: "/images/work/portfolio-react.png",
+    imgSrc: "/images/work/portfolio-react.webp",
     title: "Portfolio",
     tags: ["Frontend", "Design", "Development"],
     projectLink: "https://github.com/lagux-coding/portfolio-react.git",

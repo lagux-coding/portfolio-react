@@ -2,7 +2,10 @@
 <html lang="en" class="custom-scrollbar">
   <head>
     <meta charset="UTF-8" />
-
+    <meta
+      name="description"
+      content="Personal portfolio - Showcasing projects and coding skills."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nam H.T. Nguyen - Portfolio</title>
 
@@ -10,12 +13,25 @@
     <link rel="shortcut icon" href="/images/favicon.svg" type="image/svg+xml" />
 
     <!-- Google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.onload=null;this.removeAttribute('media');"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
+
+    <link rel="preload" as="image" href="/images/hero-banner-2.webp" type="image/webp" />
   </head>
   <body>
     <div id="root"></div>

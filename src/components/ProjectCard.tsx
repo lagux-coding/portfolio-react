@@ -33,7 +33,12 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }: ProjectCardP
           </span>
         </div>
 
-        <a href={projectLink} target="_blank" className="absolute inset-0"></a>
+        <a
+          href={projectLink}
+          aria-label="project-link"
+          target="_blank"
+          className="absolute inset-0"
+        ></a>
       </div>
     </div>
   );

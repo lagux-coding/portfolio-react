@@ -102,6 +102,7 @@ const Contact = () => {
                 key={key}
                 href={href}
                 target="_blank"
+                aria-label="social-link"
                 className="grid h-12 w-12 place-items-center rounded-lg ring-2 ring-zinc-50/50 transition-[background-color,color] ring-inset hover:bg-violet-400 hover:text-zinc-950 active:bg-zinc-50/80"
               >
                 {icon}

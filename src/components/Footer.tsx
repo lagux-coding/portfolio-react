@@ -73,6 +73,7 @@ const Footer = () => {
                   <li key={key}>
                     <a
                       href={href}
+                      aria-label="sitemap"
                       className="block py-1 text-sm text-zinc-400 transition-colors hover:text-zinc-200"
                     >
                       {label}

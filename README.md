@@ -6,7 +6,7 @@
 
 ### 🌍 See It Live 🔗 **[Visit My Portfolio](https://namht.is-a.dev)**
 
-![Portfolio Preview](/public/images/work/portfolio-react.png)
+![Portfolio Preview](/public/images/work/portfolio-react.webp)
 
 A sleek and modern developer portfolio built with **React, TypeScript, and TailwindCSS**,  
 featuring **Lenis smooth scrolling**, **Framer Motion animations**, and **fully responsive design**.

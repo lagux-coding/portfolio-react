@@ -22,7 +22,7 @@ const Work = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.8", "end 1"],
+    offset: ["start 1", "end 1"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);

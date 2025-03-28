@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:opsz,wght@14..32,300&display=swap");
+
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -15,7 +17,7 @@ body {
 }
 
 @theme {
-  --font-sans: "Inter", sans-serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
   /* ... */
 }
 
@@ -29,17 +31,30 @@ body {
 \* ------------------------------------------- */
 .headline-1 {
   @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1aa);
+  background: -webkit-linear-gradient(0deg, #fafafa, #bc54bb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline-4,
+.headline-3 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #e4a1e3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .headline-1 {
-  @apply mt-5 mb-8 max-w-[15ch] text-5xl leading-tight font-semibold sm:max-w-[20ch] lg:mb-10 lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15];
+  @apply mt-3 mb-3 max-w-[15ch] text-5xl leading-tight font-semibold sm:max-w-[20ch] lg:mb-5 lg:max-w-[15ch] lg:text-[55px] lg:leading-[1.15];
 }
 
 .headline-2 {
-  @apply text-3xl font-semibold lg:text-4xl lg:leading-tight;
+  @apply mt-3 mb-3 text-3xl font-semibold lg:text-4xl lg:leading-tight;
+}
+.headline-3 {
+  @apply mt-1 mb-3 text-3xl font-semibold lg:text-3xl lg:leading-tight;
+}
+.headline-4 {
+  @apply mt-3 mb-3 text-xl font-semibold lg:text-2xl lg:leading-tight;
 }
 
 .title-1 {

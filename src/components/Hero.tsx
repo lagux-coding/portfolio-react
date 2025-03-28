@@ -1,10 +1,11 @@
 import { FaArrowCircleDown } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
+import { ReactTyped } from "react-typed";
 import { ButtonOutline, ButtonPrimary } from "./Button";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-28 lg:pt-36">
+    <section id="home" className="pt-28">
       <div className="container">
         <div>
           <div className="flex items-center gap-3">
@@ -26,7 +27,24 @@ const Hero = () => {
             </div>
           </div>
 
-          <h2 className="headline-1">Building Thoughtful and Scalable Web application</h2>
+          <div className="flex flex-col text-2xl lg:mt-2">
+            <p className="headline-4">Hello I m '</p>
+            <h2 className="headline-1">Nam H. T. Nguyen</h2>
+            <p className="headline-4">
+              A passionate{" "}
+              <ReactTyped
+                strings={["Backend Developer", "Full-stack Enthusiast", "DevSecOps Explorer"]}
+                typeSpeed={100}
+                backSpeed={50}
+                loop
+                cursorChar="|"
+                showCursor={true}
+              />
+            </p>
+            <p className="mt-3 mb-6 text-xl font-light lg:text-2xl lg:leading-tight">
+              Exploring backend development with a curiosity for system security and scalability.
+            </p>
+          </div>
 
           <div className="flex items-center gap-3">
             <ButtonPrimary label="Download CV" icon={<MdDownload />} />

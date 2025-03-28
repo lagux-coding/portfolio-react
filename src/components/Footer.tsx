@@ -104,8 +104,8 @@ const Footer = () => {
         </div>
 
         <div className="mb-8 flex items-center justify-between pt-10">
-          <a href="" className="mb-2">
-            <img src="/images/logo.svg" width={40} height={40} alt="Logo" />
+          <a href="" className="headline-1 mb-2">
+            <p className="text-xl">Nam H. T. Nguyen</p>
           </a>
 
           <p className="text-sm text-zinc-500">

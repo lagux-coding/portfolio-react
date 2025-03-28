@@ -16,7 +16,7 @@ const About = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 0.5", "end 1"],
+    offset: ["start 0.6", "end 1"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -67,9 +67,9 @@ const About = () => {
         <div className="mt-6 rounded-2xl bg-zinc-800/50 p-8">
           <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">Random Quote</h3>
           <blockquote className="mt-6 border-l-2 pl-6 text-zinc-400 italic md:text-xl">
-            "Coding is not just code, that is a live thing to serve humans!"
+            "Code is like humor. When you have to explain it, it’s bad."
           </blockquote>
-          <p className="mt-3 text-right text-lg font-semibold text-white">- Masaaki Imai</p>
+          <p className="mt-3 text-right text-lg font-semibold text-white">– Cory House</p>
         </div>
       </div>
     </motion.section>

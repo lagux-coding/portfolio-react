@@ -30,20 +30,16 @@ body {
   # TYPOGRAPHY
 \* ------------------------------------------- */
 .headline-1 {
-  background-image: -webkit-linear-gradient(90deg, #fafafa, #be00fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 100% 100%;
-  background-position: center;
+  background-image: linear-gradient(90deg, #fafafa, #be00fa);
+  background-clip: text;
+  color: transparent;
 }
 
 .headline-4,
 .headline-3 {
-  background-image: -webkit-linear-gradient(90deg, #fafafa, #d34cff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 100% 100%;
-  background-position: center;
+  background-image: linear-gradient(90deg, #fafafa, #d34cff);
+  background-clip: text;
+  color: transparent;
 }
 
 .headline-1 {

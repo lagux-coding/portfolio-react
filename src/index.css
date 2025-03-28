@@ -30,7 +30,7 @@ body {
   # TYPOGRAPHY
 \* ------------------------------------------- */
 .headline-1 {
-  background-image: -webkit-linear-gradient(0deg, #fafafa, #bc54bb);
+  background-image: -webkit-linear-gradient(0deg, #fafafa, #be00fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100% 100%;
@@ -39,7 +39,7 @@ body {
 
 .headline-4,
 .headline-3 {
-  background-image: -webkit-linear-gradient(0deg, #fafafa, #e4a1e3);
+  background-image: -webkit-linear-gradient(0deg, #fafafa, #d34cff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100% 100%;

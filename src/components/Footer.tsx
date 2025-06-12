@@ -39,7 +39,7 @@ const socials = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/codewithsadee",
+    href: "https://www.instagram.com/laguxl_",
   },
 ];
 

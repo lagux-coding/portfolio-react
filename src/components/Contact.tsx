@@ -1,9 +1,27 @@
-import { useRef } from "react";
+import { useRef, useState, type SyntheticEvent } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Forminit } from "forminit";
+
+// Forminit form: inputs are named fi-{type}-{name}. Rules: https://forminit.com/setup.md
+const FORM_ID = "4ejosbe3oxh";
+
+const FIELD_ERRORS: Record<string, string> = {
+  "sender.fullName": "Please use only letters, spaces, hyphens, apostrophes and periods.",
+  "sender.email": "Please enter a valid email address.",
+};
+
+function errorText(error?: { error?: string; fieldName?: string; message?: string }): string {
+  const field = error?.fieldName ?? /['"]([^'"]+)['"]/.exec(error?.message ?? "")?.[1];
+  if (field && FIELD_ERRORS[field]) return FIELD_ERRORS[field];
+  if (error?.error === "TOO_MANY_REQUESTS") return "Please wait a few seconds and try again.";
+  return "Something went wrong. Please try again.";
+}
+
+const forminit = new Forminit();
 
 const socialLinks = [
   {
-    href: "https://www.github.com/lagux-coding",
+    href: "https://github.com/lagux-coding",
     icon: (
       <svg
         width="24"
@@ -21,7 +39,7 @@ const socialLinks = [
     alt: "GitHub",
   },
   {
-    href: "/",
+    href: "https://linkedin.com/in/lagux",
     icon: (
       <svg
         width="24"
@@ -39,7 +57,7 @@ const socialLinks = [
     alt: "LinkedIn",
   },
   {
-    href: "https://www.facebook.com/laguxl",
+    href: "https://www.facebook.com/profile.php?id=100040225846442",
     icon: (
       <svg
         width="25"
@@ -78,6 +96,10 @@ const socialLinks = [
 
 const Contact = () => {
   const ref = useRef(null);
+  const sendingRef = useRef(false);
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState<{ type: "success" | "error"; text: string } | null>(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 0.8", "end 1"],
@@ -86,23 +108,56 @@ const Contact = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
+  async function onSubmit(event: SyntheticEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (sendingRef.current) return;
+    const form = event.currentTarget;
+    const fd = new FormData(form);
+
+    for (const k of ["fi-sender-fullName"]) {
+      const v = fd.get(k);
+      if (typeof v === "string") fd.set(k, v.replace(/[\u2018\u2019]/g, "'"));
+    }
+
+    sendingRef.current = true;
+    setSending(true);
+    setStatus(null);
+
+    try {
+      const { data, error } = await forminit.submit(FORM_ID, fd);
+      if (error || typeof data?.hashId !== "string") {
+        console.error("Forminit:", error ?? data);
+        return setStatus({ type: "error", text: errorText(error) });
+      }
+      form.reset();
+      setStatus({ type: "success", text: "Thank you! Your message has been sent successfully." });
+    } catch (err) {
+      console.error("Forminit:", err);
+      setStatus({ type: "error", text: "Something went wrong. Please try again." });
+    } finally {
+      sendingRef.current = false;
+      setSending(false);
+    }
+  }
+
   return (
     <motion.section ref={ref} style={{ opacity, scale }} id="contact" className="section">
       <div className="container-contact">
         <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
-          <h2 className="headline-2 lg:max-w-[20ch]">Contact me for collabration</h2>
+          <h2 className="headline-2 lg:max-w-[20ch]">Contact me for collaboration</h2>
 
           <p className="mt-3 mb-8 max-w-[50ch] text-zinc-400 lg:max-w-[30ch]">
             Open to work & collaborations! If you're looking for a passionate developer, let's chat!
           </p>
 
           <div className="mt-2 flex items-center gap-2">
-            {socialLinks.map(({ href, icon }, key) => (
+            {socialLinks.map(({ href, icon, alt }, key) => (
               <a
                 key={key}
                 href={href}
                 target="_blank"
-                aria-label="social-link"
+                rel="noopener noreferrer"
+                aria-label={alt}
                 className="grid h-12 w-12 place-items-center rounded-lg ring-2 ring-zinc-50/50 transition-[background-color,color] ring-inset hover:bg-violet-400 hover:text-zinc-950 active:bg-zinc-50/80"
               >
                 {icon}
@@ -111,7 +166,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form action="https://getform.io/f/bwnqveqa" method="POST" className="xl:pl-10 2xl:pl-20">
+        <form onSubmit={onSubmit} className="xl:pl-10 2xl:pl-20">
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-2">
             {/* Name */}
             <div className="mb-4">
@@ -121,11 +176,11 @@ const Contact = () => {
 
               <input
                 type="text"
-                name="name"
+                name="fi-sender-fullName"
                 id="name"
                 autoComplete="name"
                 required
-                placeholder="Nam H.T. Nguyen"
+                placeholder="Nguyen Hien Trung Nam"
                 className="text-field"
               />
             </div>
@@ -137,8 +192,8 @@ const Contact = () => {
               </label>
 
               <input
-                type="text"
-                name="email"
+                type="email"
+                name="fi-sender-email"
                 id="email"
                 autoComplete="email"
                 required
@@ -155,7 +210,7 @@ const Contact = () => {
             </label>
 
             <textarea
-              name="message"
+              name="fi-text-message"
               id="message"
               placeholder="Say Hi!"
               required
@@ -163,9 +218,24 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <button type="submit" className="btn btn-primary w-full max-w-full justify-center">
-            Send
+          <button
+            type="submit"
+            disabled={sending}
+            className="btn btn-primary w-full max-w-full justify-center disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {sending ? "Sending..." : "Send"}
           </button>
+
+          {status && (
+            <p
+              role="status"
+              className={`mt-4 text-center text-sm ${
+                status.type === "success" ? "text-emerald-400" : "text-rose-400"
+              }`}
+            >
+              {status.text}
+            </p>
+          )}
         </form>
       </div>
     </motion.section>

@@ -1,7 +1,7 @@
 import { FilterButtonProps } from "@/types/types";
 import { Button } from "./ui/button";
 
-const categories = ["All", "Languages", "Frontend", "Backend", "Databases", "Others"];
+const categories = ["All", "Languages", "Frontend", "Backend", "Databases", "DevOps", "Others"];
 
 const FilterButton = ({ activeCategory, setActiveCategory }: FilterButtonProps) => {
   return (

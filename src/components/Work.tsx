@@ -4,6 +4,18 @@ import ProjectCard from "./ProjectCard";
 
 const works = [
   {
+    imgSrc: "/images/work/storynest.jpg",
+    title: "StoryNest",
+    tags: ["ASP.NET Core", "PostgreSQL", "AWS S3", "Docker"],
+    projectLink: "https://github.com/lagux-coding/storynest-be",
+  },
+  {
+    imgSrc: "/images/work/couplemood.png",
+    title: "CoupleMood",
+    tags: ["ASP.NET Core", "PostgreSQL", "Redis", "Docker"],
+    projectLink: "https://github.com/LeHuyVuu/capstone-backend",
+  },
+  {
     imgSrc: "/images/work/prestige-koi-auction.webp",
     title: "Prestige Koi Auction",
     tags: ["API", "Frontend", "Backend", "JWT", "Development"],
@@ -11,7 +23,7 @@ const works = [
   },
   {
     imgSrc: "/images/work/portfolio-react.webp",
-    title: "Portfolio",
+    title: "Portfolio 2026",
     tags: ["Frontend", "Design", "Development"],
     projectLink: "https://github.com/lagux-coding/portfolio-react.git",
   },

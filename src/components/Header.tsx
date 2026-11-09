@@ -11,7 +11,7 @@ const Header = () => {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 md:grid md:grid-cols-[1fr_3fr_1fr] md:px-6">
         <h1 className="headline-1">
           <a href="#" className="text-xl">
-            Nam H. T. Nguyen
+            Nguyen Hien Trung Nam
           </a>
         </h1>
 

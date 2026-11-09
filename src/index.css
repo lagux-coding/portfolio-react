@@ -22,7 +22,7 @@ body {
 }
 
 /* Plugins */
-@plugin 'tailwind-scrollbar';
+@plugin "tailwind-scrollbar";
 
 @plugin "tailwindcss-animate";
 
